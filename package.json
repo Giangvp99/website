@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./build/index.html",
   "author": "Giangvp99",
   "license": "MIT",
   "scripts": {
