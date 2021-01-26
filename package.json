@@ -5,6 +5,7 @@
   "author": "Giangvp99",
   "license": "MIT",
   "scripts": {
+    "start": "webpack serve --mode=production",
     "build": "webpack --mode development",
     "dev": "concurrently \"cd mini-server && json-server --watch db.json\" \"webpack serve --mode=development\""
   },
