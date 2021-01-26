@@ -19,7 +19,7 @@ const mapStateToProps = (state) => ({
   todos: state.todos,
 });
 const mapDispatchToProps = (dispatch) => ({
-  setTodos: (todos) => dispatch(setTodos(todos)),
+  setTodos: () => dispatch(setTodos()),
   addTodo: (todo) => dispatch(addTodo(todo)),
   deleteTodo: (id) => dispatch(deleteTodo(id)),
   // fetchTodos: async () => {

@@ -1,9 +1,8 @@
 import * as types from "./TodosTypesAction";
 import shortid from "shortid";
 
-export const setTodos = (todos) => ({
+export const setTodos = () => ({
   type: types.SET_TODOS,
-  payload: todos,
 });
 
 export const addTodo = (todo) => {
