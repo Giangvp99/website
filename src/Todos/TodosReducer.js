@@ -11,7 +11,9 @@ const todosReducer = (state = initialTodos, action) => {
       return [...state, { title, id }];
     }
     case types.DELETE_TODO: {
-      return [...state];
+      const { id } = action.payload;
+      const index = state.findIndex((todo) => todo.id === id);
+      return [...state.slice(0, index), ...state.slice(index + 1)];
     }
     case types.MODIFY_TODO: {
       return [...state];

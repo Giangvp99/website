@@ -9,16 +9,16 @@ export const setTodos = (todos) => ({
 export const addTodo = (todo) => {
   const id = shortid.generate();
   const title = todo;
-  fetch("http://localhost:3000/todos", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ title, id }),
-  });
+  const isDone = false;
   return {
     type: types.ADD_TODO,
-    payload: { title, id },
+    payload: { title, id, isDone },
+  };
+};
+
+export const deleteTodo = (id) => {
+  return {
+    type: types.DELETE_TODO,
+    payload: {id},
   };
 };
